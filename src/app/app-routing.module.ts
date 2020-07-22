@@ -7,6 +7,7 @@ import { from } from 'rxjs';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'list', component: ProductListComponent },
+  { path: 'test', component: LoginComponent },
   {
     path: 'list/:name',
     component: ProductListComponent,
