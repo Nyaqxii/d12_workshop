@@ -6,7 +6,7 @@ import { from, Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-
+  public product: Product;
   constructor(private http: HttpClient) { }
 
   getAllProduct(): Observable<Product[]> {
@@ -20,4 +20,13 @@ export class ProductService {
     //  'http://165.22.255.58:3000/products'
     //);
   }
+
+  saveProductDetail(product: Product): void {
+    this.product = product;
+  }
+
+  restoreProductDetail(): Product {
+    return this.product;
+  }
 }
+

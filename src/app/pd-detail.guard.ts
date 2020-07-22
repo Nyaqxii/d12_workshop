@@ -5,8 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
-
+export class PdDetailGuard implements CanActivate {
   constructor(private router: Router) { }
 
   canActivate(
@@ -18,7 +17,7 @@ export class AuthGuard implements CanActivate {
     if (!param) {
       return true;
     } else {
-      this.router.navigate(['/pd-detail'], {
+      this.router.navigate(['/pd-detail/' + name], {
         queryParams: { returnUrl: state.url },
       });
       return false;

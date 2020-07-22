@@ -33,9 +33,15 @@
             <th>
               XXX
             </th>
-            <th>{{ product.code }}</th>
-            <th>{{ product.name | uppercase | productName}}</th>
-            <th>{{ product.price | number: "1.2" }}</th>
+            <th [routerLink]="['/pd-detail/' + product.code]" (click)="onProductDetail(product)">
+              {{product.code}}
+            </th>
+            <th [routerLink]="['/pd-detail/' + product.code]" (click)="onProductDetail(product)">
+              {{product.name | uppercase | productName: "-"}}
+            </th>
+            <th [routerLink]="['/pd-detail/' + product.code]" (click)="onProductDetail(product)">
+              {{product.price | number : '1.2'}}
+            </th>
             <th>Yes</th>
             <th>
               <app-rating [rating]="product.rating" (ratingClicked)="onRatingClicked($event)"></app-rating>

@@ -1,1 +1,30 @@
-<p>product-detail works!</p>
+<nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="./login" [routerLink]="['/login']">Login <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./list" [routerLink]="['/list']">Product-List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./test" [routerLink]="['/test']">test</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="card">
+
+    <div class="container"><img [src]="product.imageUrl" [alt]="product.imageUrl" style="width:50%">
+        <h4><b>{{product.name | uppercase | productName: "-"}}</b></h4>
+        <p>Code: {{product.code}}</p>
+        <p>Price: {{product.price  | number : '1.2'}}</p>
+        <p>Available: <i>Yes</i>
+        </p>
+        <p>
+            <app-rating [rating]="product.rating" (ratingClicked)="onRatingClicked($event)"></app-rating>
+        </p>
+    </div>
+</div>

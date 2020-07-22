@@ -11,6 +11,9 @@ import { ProductPipe } from './product.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { RatingComponent } from './rating/rating.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { Product1Component } from './product1/product1.component';
+import { Product2Component } from './product2/product2.component';
+import { Product3Component } from './product3/product3.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,10 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ProductNamePipe,
     ProductPipe,
     RatingComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    Product1Component,
+    Product2Component,
+    Product3Component
   ],
   imports: [
     BrowserModule,
