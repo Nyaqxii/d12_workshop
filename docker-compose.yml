@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  web:
+    build: .
+    image: neeyalionessdk/workshop:12.0.10
+    ports:
+      - "9999:80"
