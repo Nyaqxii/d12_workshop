@@ -9,13 +9,17 @@ import { ProductNamePipe } from './product-name.pipe';
 import { from } from 'rxjs';
 import { ProductPipe } from './product.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { RatingComponent } from './rating/rating.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ProductListComponent,
     ProductNamePipe,
-    ProductPipe
+    ProductPipe,
+    RatingComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -16,10 +16,20 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     this.getAll();
   }
+  //getAll(): void {
+  // this.service.getAllProduct().subscribe((products) => {
+  //  return (this.products = products);
+  // });
+  //}
+
   getAll(): void {
-    this.service.getAllProduct().subscribe((products) => {
-      return (this.products = products);
-    });
+    this.service
+      .getAllProduct()
+      .subscribe((allProduct) => (this.products = allProduct));
+  }
+  onRatingClicked(message: string): void {
+    // console.log(message);
+    alert(message);
   }
 
 }

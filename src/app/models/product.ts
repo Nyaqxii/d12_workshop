@@ -1,5 +1,5 @@
 export class Product {
-  public rating: number;
+  public rating: number = 4;
   public available: boolean;
   public imageUrl: string;
 
