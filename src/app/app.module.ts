@@ -8,7 +8,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductNamePipe } from './product-name.pipe';
 import { from } from 'rxjs';
 import { ProductPipe } from './product.pipe';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,8 @@ import { ProductPipe } from './product.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
